@@ -1,0 +1,83 @@
+" Configuration file for vim
+set modelines=0		" CVE-2007-2438
+
+" Normally we use vim-extensions. If you want true vi-compatibility
+" remove change the following statements
+set nocompatible	" Use Vim defaults instead of 100% vi compatibility
+set backspace=2		" more powerful backspacing
+
+" Don't write backup file if vim is being called by "crontab -e"
+au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
+" Don't write backup file if vim is being called by "chpass"
+au BufWrite /private/etc/pw.* set nowritebackup nobackup
+
+" 檔案編碼
+set encoding=utf-8
+set fileencodings=utf-8,cp950
+
+" 語法上色顯示
+syntax on
+
+" 設定自動縮排
+set shiftwidth=4    " 設定縮排寬度 = 4
+set tabstop=4       " tab 的字元數
+set softtabstop=4
+
+" 設定背景顏色
+set background=dark
+
+" 啟用行游標提示。
+set cursorline
+
+" 文字編碼加入 utf8。
+set enc=utf8
+
+" 標記關鍵字。
+set hls
+
+" 只在 Normal 以及 Visual 模式使用滑鼠，也就是取消 Insert 模式的滑鼠，
+set mouse=nv
+
+" 顯示行號。
+set number
+
+" 顯示相對行號。
+" set relativenumber
+
+" 搜尋不分大小寫。
+set ic
+
+" 使用空白取到 Tab。
+set expandtab
+
+" 自訂縮排 (Tab) 位元數。
+set tabstop=2
+set shiftwidth=2
+
+" 字數過長時換行。
+set wrap
+"set nowrap     " 不換行。
+
+" 關閉嗶嗶聲。
+set noeb
+
+" 自動切換當前目錄。
+set autochdir
+
+" 捲動時保留底下 3 行。
+set scrolloff=3
+
+" 摺疊 Folding。
+set foldenable
+set foldmethod=indent
+set foldcolumn=1
+set foldlevel=5
+
+" 在 fish 裡相容 Vim 裡的 Neobundle。
+set shell=/bin/bash
+
+" 高亮當前行 (水平)。
+set cursorline
+
+" 高亮當前列 (垂直)。
+set cursorcolumn
